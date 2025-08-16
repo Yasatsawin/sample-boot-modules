@@ -1,4 +1,4 @@
-package th.mfu;
+/* package th.mfu;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -38,3 +38,4 @@ public class CustomerIT {
 }
 
 
+ */

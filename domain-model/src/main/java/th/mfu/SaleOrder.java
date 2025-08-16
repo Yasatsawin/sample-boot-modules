@@ -12,8 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 @Entity
 public class SaleOrder {
@@ -25,11 +24,11 @@ public class SaleOrder {
     private LocalDate orderDate;
 
     @ManyToOne
-    @JsonBackReference("customer-orders")
+
     private Customer customer;
 
     @OneToMany(mappedBy = "saleOrder", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference("order-items")
+
     private List<SaleOrderItem> items = new ArrayList<>();
 
     private Double totalAmount;
